@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Random Anime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span>Get Random</span>
+            <img src="/images/logo.png" alt="logo" width="155">
+        </header>
+        <div class="content">
+            <% if(locals.anime){ %>
+                <div>
+                    <img src="<%= anime.images.webp.large_image_url %>" alt="anime image">
+                </div>
+                <div>
+                    <h2><%= anime.title %></h2>
+                    <p><%= anime.synopsis %></p>
+                    <a href="<%= anime.url %>" target="_blank">Read More</a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
